@@ -10,6 +10,10 @@
 
     <script src="./Employee.js"></script>
     <script src="./Manager.js"></script>
+
+    <script src="./Product.js"></script>
+    <script src="./Order.js"></script>
+
     <script>
 
         // Задание 1: "Управление персоналом компании"
@@ -20,6 +24,20 @@
 
         const manager = new Manager("Jane Doe", "Sales");
         manager.displayInfo();
+
+        // Задание 2: "Управление списком заказов"
+        // Реализуйте классы для управления продуктами и заказами:
+
+        const order = new Order(12345);
+
+        const product1 = new Product("Phone", 500);
+        const product2 = new Product("Headphones", 100);
+
+        order.addProduct(product1);
+        order.addProduct(product2);
+
+        console.log(`Общая стоимость заказа: ${order.getTotalPrice()}`);
+
     </script>
 </body>
 
