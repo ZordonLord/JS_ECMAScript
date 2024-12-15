@@ -9,6 +9,8 @@
 <body>
 
     <script src="./userService.js"></script>
+    <script src="./saveUserData.js"></script>
+    <script src="./changeStyleDelayed.js"></script>
     <script>
 
         // Задание 1: "Получение данных о пользователе"
@@ -22,6 +24,23 @@
             .then(user => console.log('Данные пользователя:', user))
             .catch(error => console.error('Ошибка:', error.message));
 
+        // Задание 2: "Отправка данных на сервер"
+        // Реализуйте функцию для отправки данных о пользователе на сервер:
+
+        const user = {
+            name: 'John Smith',
+            age: 30,
+            email: 'john@example.com'
+        };
+
+        saveUserData(user)
+            .then(() => {console.log('Данные о пользователе успешно сохранены');})
+            .catch(error => {console.error(error);});
+
+        // Задание 3: "Изменение стиля элемента через заданное время"
+        // Реализуйте функцию, которая изменяет стиль элемента с задержкой:
+
+        changeStyleDelayed('myElement', 2000);
 
     </script>
 </body>
